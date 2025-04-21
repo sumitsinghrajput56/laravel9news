@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/contact', function () {
+    echo "this is contact page";
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
