@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Demo\DemoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +20,13 @@ Route::get('/', function () {
 });
 
 
-Route::get('/contact', function () {
-    echo "this is contact page";
-});
+Route::get('/about',[DemoController::class,'index']);
+Route::get('/contact',[DemoController::class,'contactMethod']);
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/contact', function () {
+//     echo "this is contact page";
+// });
+
+// Route::get('/about', function () {
+//     return view('about');
+// });

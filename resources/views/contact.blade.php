@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <p>this is about page from controller</p>
+    <h1>this is contact page from controller</h1>
 </body>
 </html>
