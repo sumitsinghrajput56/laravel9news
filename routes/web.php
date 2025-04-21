@@ -19,14 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/about',[DemoController::class,'index']);
-Route::get('/contact',[DemoController::class,'contactMethod']);
-
-// Route::get('/contact', function () {
-//     echo "this is contact page";
-// });
-
-// Route::get('/about', function () {
-//     return view('about');
-// });
+Route::controller(DemoController::class)->group(function(){
+    Route::get('/about','index');
+    Route::get('/contact','contactMethod');
+});
