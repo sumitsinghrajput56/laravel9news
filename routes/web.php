@@ -20,6 +20,6 @@ Route::get('/', function () {
 });
 
 Route::controller(DemoController::class)->group(function(){
-    Route::get('/about','index');
-    Route::get('/contact','contactMethod');
+    Route::get('/about','index')->name('about.page');
+    Route::get('/contact','contactMethod')->name('contact.page');
 });
